@@ -22,7 +22,9 @@
     <%= form.label :text %><br>
     <%= form.text_area :text %>
   </p>
-  
+
+  <%= form.hidden_field :username, :value => current_user.username %>
+
   <p>
     <%= form.submit %>
   </p>
