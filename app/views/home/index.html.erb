@@ -1,0 +1,21 @@
+<% name = current_user.present? ? current_user.email : 'Someone' %>
+
+<% if user_signed_in? %>
+    <h1>Welcome, <%= name %> </h1>
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+    <div>
+        <%= link_to 'New article', new_article_path %>
+        
+        <table>
+            <% @articles.each do |article| %>
+                <tr>
+                    <td><%= article.title %></td>
+                    <td><%= article.text %></td>
+                    <td><%= link_to 'Show', article_path(article) %></td>
+                </tr>
+            <% end %>
+        </table>
+      </div>
+<% else %>
+    <%= link_to 'Sign up', new_user_registration_path %> | <%= link_to 'Sign in', new_user_session_path %>
+<% end %>
