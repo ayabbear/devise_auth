@@ -9,5 +9,12 @@
 <%= @article.text %>
 </p>
 
-<%= link_to 'Back', root_path %> | 
-<%= link_to 'Edit', edit_article_path(@article) %>
+<p>
+<strong>Created By:</strong>
+<%= @article.username %>
+</p>
+
+<%= link_to 'Back', root_path %>
+<% if current_user.username == @article.username %>
+    | <%= link_to 'Edit', edit_article_path(@article) %>
+<% end %>
