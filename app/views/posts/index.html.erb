@@ -1,17 +1,18 @@
 
+<% name = current_user.username === @parameter.username ? 'Your ' : @parameter.username %>
+
+<h1><%= name %> Posts</h1>
 <table>
 <tr>
     <th>Title</th>
     <th>Text</th>
-    <th>Created By</th>
 </tr>
     <% @articles.each do |article| %>
         <% if article.username == @parameter.username %>
             <tr>
                 <td><%= article.title %></td>
                 <td><%= article.text %></td>
-                <td><%= article.username %></td>
-
+   
                 <td><%= link_to 'Show', article_path(article) %></td>
                 <% if current_user.username == @parameter.username %>
                         <td> | </td>
