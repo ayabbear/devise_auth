@@ -8,7 +8,7 @@ RSpec.describe Article, type: :model do
   let(:text) { FactoryBot.build :article, text: nil }
 
   context "article" do
-    it "created" do
+    it "is valid with valid attributes" do
       expect(article).to be_valid
     end
   end

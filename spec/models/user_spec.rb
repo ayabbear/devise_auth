@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
   let(:user7) { FactoryBot.build :user, firstname: "abcd", lastname: "abcdef", password: nil }
 
   context "email" do
-    it "created" do
+    it "is valid with valid attributes" do
       expect(user1).to be_valid
     end
   end
