@@ -14,7 +14,7 @@
 <%= @article.username %>
 </p>
 
-<%= link_to 'Back', root_path %>
+<%= link_to 'Back', root_path, :class => 'links' %>
 <% if current_user.username == @article.username %>
-    | <%= link_to 'Edit', edit_article_path(@article) %>
+    | <%= link_to 'Edit', edit_article_path(@article), :class => 'links' %>
 <% end %>

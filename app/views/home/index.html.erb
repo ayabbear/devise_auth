@@ -2,9 +2,9 @@
 
 <% if user_signed_in? %>
     <h1>Welcome, <%= name %> </h1>
-    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, :class => 'links' %>
     <div>
-        <%= link_to 'New article', new_article_path %>
+        <%= link_to 'New article', new_article_path, :class => 'links' %>
         
         <table>
             <tr>
@@ -16,16 +16,16 @@
                 <tr>
                     <td><%= article.title %></td>
                     <td><%= article.text %></td>
-                    <td><%= link_to article.username, posts_path(:username => article.username) %></td>
+                    <td><%= link_to article.username, posts_path(:username => article.username), :class => 'links' %></td>
 
-                    <td><%= link_to 'Show', article_path(article) %></td>
+                    <td><%= link_to 'Show', article_path(article), :class => 'links' %></td>
                     <% if current_user.username == article.username %>
                         <td> | </td>
-                        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+                        <td><%= link_to 'Edit', edit_article_path(article), :class => 'links' %></td>
                         <td> | </td>
                         <td><%= link_to 'Destroy', article_path(article),
                             method: :delete,
-                            data: { confirm: 'Are you sure?' } %></td>
+                            data: { confirm: 'Are you sure?' }, :class => 'links' %></td>
                     <% end %>
                 </tr>
             <% end %>

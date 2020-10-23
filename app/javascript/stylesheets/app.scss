@@ -1,0 +1,60 @@
+@import '~modularscale-sass/stylesheets/_modularscale';
+
+body {
+    font-family: Lato, Lucida Grande, Lucida Sans Unicode, Tahoma, Sans-Serif;
+}
+
+a {
+    color: inherit;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.field {
+    margin: .25rem 0rem;
+}
+
+.button-primary {
+    padding: 0.5rem 2.5rem;
+    margin: 1rem 0rem;
+    font-size: 1rem;
+    border: none;
+    font-weight: bold;
+    white-space: nowrap;
+    border-radius: 9999px;
+    background-color: #008ecc;
+    transition: box-shadow 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+.button-secondary {
+    padding: 0.5rem 2.5rem;
+    margin: 1rem 0rem;
+    font-size: 1rem;
+    border: 2px solid #121212;
+    font-weight: bold;
+    white-space: nowrap;
+    border-radius: 9999px;
+    transition: box-shadow 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+.button-primary:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button-secondary:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.links {
+    color: #0064bd;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.links:active {
+    color: #808080;
+    text-decoration: underline;
+    cursor: pointer;
+}
